@@ -1,0 +1,11 @@
+li
+  - if @link()
+    a(href=@link)
+      .featured-container(data-track="featured project" data-track-label=@title)
+        img.featured(width=30 height=30 @src title=@imgTitle alt="background image for #{@title()}")
+        p.project-name= @title
+  - else
+    span
+      .featured-container(data-track="featured project" data-track-label=@title)
+        img.featured(width=30 height=30 @src title=@imgTitle alt="background image for #{@title()}")
+        p.project-name= @title
