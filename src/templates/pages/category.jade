@@ -1,0 +1,16 @@
+- Loader = require "../includes/loader"
+
+main.category-page(role="main")
+  article.projects(@style)
+    header.category
+      h2.category-name=@name
+      span.category-image-container
+        img(src=@avatarUrl)
+      p.description=@description
+
+    span(class=@hiddenIfCategoryProjectsLoaded)
+      = Loader(this)
+    = @projects
+
+
+  = @Categories

@@ -1,0 +1,19 @@
+section.profile.recent-projects(class=@hiddenUnlessCurrentUser)
+  h2
+    a(href=@userLink)
+      span Your Projects →
+  .profile-container(@style)
+    .profile-info
+      .user-avatar-container
+        a(href=@userLink)
+          .user-avatar(class=@userAvatarIsAnon style=@userAvatarStyle alt="Your avatar")
+      - if @currentUser.isAnon()
+        .anon-user-sign-up.opens-pop-over(click=@toggleSignInPopVisible)
+          button Sign in
+          span(class=@hiddenUnlessSignInPopVisible)
+            = @SignInPop
+    article.projects
+      span(class=@hiddenIfUserIsFetched)
+        =@loader
+
+      =@projects

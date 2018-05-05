@@ -1,0 +1,14 @@
+public/*.css
+public/*.css.map
+public/*.ks
+public/*.js.map
+public/*.js
+*.gz
+src/cache/*
+src/templates/**/*.js
+*.md5
+.config/configstore/update-notifier-nodemon.json
+.config/configstore/update-notifier-pnpm.json
+.viminfo
+.webpackCache/*
+.eslintcache
